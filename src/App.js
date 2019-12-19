@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import ColorConverter from "./ColorConverter.js";
+import ColorConverter from "./ColorConverter/ColorConverter.js";
 import Home from "./Home.js";
 
 class App extends Component {
