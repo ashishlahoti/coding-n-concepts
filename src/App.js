@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import ColorConverter from "./ColorConverter/ColorConverter.js";
 import Home from "./Home.js";
+import ColorConverter from "./ColorConverter/ColorConverter.js";
+import JsonFormatter from "./JsonFormatter/JsonFormatter";
 
 class App extends Component {
   render() {
@@ -21,8 +22,7 @@ class App extends Component {
               data-target="#navbarNavDropdown"
               aria-controls="navbarNavDropdown"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+              aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
@@ -33,12 +33,16 @@ class App extends Component {
                 <li className="nav-item">
                   <Link className="nav-link" to="/color-converter">Color Converter</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/json-formatter">Json formatter</Link>
+                </li>
               </ul>
             </div>
           </nav>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/color-converter" component={ColorConverter} />
+            <Route path="/json-formatter" component={JsonFormatter} />
           </Switch>
         </Router>
       </div>
